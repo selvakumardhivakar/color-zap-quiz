@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Concept Color Quiz</title>
+    <meta name="description" content="A random color quiz that reveals DSA concepts.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="stats">
+            <span>Refreshes: <span id="refresh-count">0</span></span>
+        </div>
+        <h1>DSA Concept Reveal</h1>
+        <p>Click the button to reveal a random color and its associated DSA concept!</p>
+        
+        <div class="card">
+            <div id="color-display" class="color-display">
+                <span id="concept-text" class="concept-text hidden">?</span>
+            </div>
+            <button id="reveal-btn" class="reveal-btn">Reveal Concept</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
