@@ -1,34 +1,34 @@
 const problems = [
-  { topic: "HashMap", title: "Two Sum", desc: "Find two numbers in an array that add up to a target sum.", color: "#ef4444" },
-  { topic: "HashMap", title: "Contains Duplicate", desc: "Check if an array contains any duplicate elements.", color: "#ef4444" },
-  { topic: "HashMap", title: "Valid Anagram", desc: "Determine if two strings are anagrams of each other.", color: "#ef4444" },
-  { topic: "HashMap", title: "First Unique Character", desc: "Find the first non-repeating character in a string.", color: "#ef4444" },
-  { topic: "HashMap", title: "Intersection of Two Arrays", desc: "Find the common elements between two arrays.", color: "#ef4444" },
+  { desc: "I hand you a list of numbers and a magic target. Can you point out the two numbers that sum up to it?", input: "nums = [2,7,11,15], target = 9", output: "[0,1]" },
+  { desc: "Are there any copycats in this array? Tell me if you spot a number sneaking in twice.", input: "nums = [1,2,3,1]", output: "true" },
+  { desc: "If you scramble the letters of the first string, can you perfectly build the second one?", input: "s = 'anagram', t = 'nagaram'", output: "true" },
+  { desc: "Scan this string and find the very first character that stands entirely alone with no duplicates.", input: "s = 'leetcode'", output: "0" },
+  { desc: "I have two lists. What are the unique items they both share in common?", input: "nums1 = [1,2,2,1], nums2 = [2,2]", output: "[2]" },
   
-  { topic: "Two Pointers", title: "Valid Palindrome", desc: "Check if a string reads the same forwards and backwards.", color: "#3b82f6" },
-  { topic: "Two Pointers", title: "Reverse String", desc: "Reverse a string in-place.", color: "#3b82f6" },
-  { topic: "Two Pointers", title: "Move Zeroes", desc: "Move all 0s to the end of an array while maintaining order.", color: "#3b82f6" },
-  { topic: "Two Pointers", title: "Squares of a Sorted Array", desc: "Return the squares of a sorted array, sorted in non-decreasing order.", color: "#3b82f6" },
-  { topic: "Two Pointers", title: "Remove Element", desc: "Remove all instances of a value in-place from an array.", color: "#3b82f6" },
+  { desc: "Read this sentence forwards. Now backwards. Is it exactly the same if you ignore spaces and symbols?", input: "s = 'A man, a plan, a canal: Panama'", output: "true" },
+  { desc: "Take this array of characters and flip it completely upside down, in-place.", input: "s = ['h','e','l','l','o']", output: "['o','l','l','e','h']" },
+  { desc: "Sweep through this array and push every single zero to the very end, but keep the other numbers in order.", input: "nums = [0,1,0,3,12]", output: "[1,3,12,0,0]" },
+  { desc: "Take this sorted array, square every number, and give me a new sorted array.", input: "nums = [-4,-1,0,3,10]", output: "[0,1,9,16,100]" },
+  { desc: "I hate a specific number. Scrub every instance of it from this array without making a new one.", input: "nums = [3,2,2,3], val = 3", output: "2, nums = [2,2,_,_]" },
   
-  { topic: "Basics / Array", title: "Find Maximum and Minimum", desc: "Find both the largest and smallest numbers in an array.", color: "#10b981" },
-  { topic: "Basics / String", title: "Count Vowels", desc: "Count the number of vowels in a given string.", color: "#10b981" },
-  { topic: "Basics / Math", title: "FizzBuzz", desc: "Print numbers 1 to n, replacing multiples of 3 and 5 with Fizz and Buzz.", color: "#10b981" },
-  { topic: "Basics / Array", title: "Running Sum", desc: "Calculate the running sum of a 1D array.", color: "#10b981" },
-  { topic: "Basics / Math", title: "Check Prime", desc: "Determine whether a given number is a prime number.", color: "#10b981" },
+  { desc: "Scan this array once and report back both the absolute biggest and smallest numbers you saw.", input: "nums = [3, 2, 1, 5, 6, 4]", output: "Max: 6, Min: 1" },
+  { desc: "How many vowels (a, e, i, o, u) are hiding inside this string?", input: "s = 'hello world'", output: "3" },
+  { desc: "Count to n! But wait, replace multiples of 3 with 'Fizz' and multiples of 5 with 'Buzz'.", input: "n = 3", output: "['1','2','Fizz']" },
+  { desc: "Walk through this array and keep a running total of everything you've seen so far.", input: "nums = [1,2,3,4]", output: "[1,3,6,10]" },
+  { desc: "Is this number only divisible by 1 and itself? Prove it.", input: "n = 11", output: "true" },
   
-  { topic: "Basics / Array", title: "Missing Number", desc: "Find the missing number in an array containing n distinct numbers taken from 0 to n.", color: "#f59e0b" },
-  { topic: "Basics / String", title: "Reverse Words", desc: "Reverse the order of characters in each word within a sentence.", color: "#f59e0b" },
-  { topic: "Basics / Array", title: "Majority Element", desc: "Find the element that appears more than ⌊n / 2⌋ times.", color: "#f59e0b" },
-  { topic: "Basics / Two Pointers", title: "Merge Sorted Array", desc: "Merge two sorted arrays into one sorted array.", color: "#f59e0b" },
-  { topic: "Basics / Array", title: "Single Number", desc: "Find the single element in an array where every other element appears twice.", color: "#f59e0b" }
+  { desc: "Someone stole exactly one number from this sequence of 0 to n. Which one is it?", input: "nums = [3,0,1]", output: "2" },
+  { desc: "Keep the words in their original order, but spell each word completely backwards.", input: "s = 'Let\\'s take LeetCode contest'", output: "'s\\'teL ekat edoCteeL tsetnoc'" },
+  { desc: "Who rules this array? Find the number that appears more than half the time.", input: "nums = [3,2,3]", output: "3" },
+  { desc: "Take these two pre-sorted lists and zip them together into one giant sorted list.", input: "nums1 = [1,2,3,0,0,0], nums2 = [2,5,6]", output: "[1,2,2,3,5,6]" },
+  { desc: "Every number here brought a twin... except one. Who is the lonely number?", input: "nums = [4,1,2,1,2]", output: "4" }
 ];
 
 const problemDisplay = document.getElementById("problem-display");
 const conceptText = document.getElementById("concept-text");
-const topicBadge = conceptText.querySelector(".topic-badge");
-const problemTitle = conceptText.querySelector(".problem-title");
-const problemDesc = conceptText.querySelector(".problem-desc");
+const problemDesc = document.getElementById("problem-desc");
+const problemInput = document.getElementById("problem-input");
+const problemOutput = document.getElementById("problem-output");
 const revealBtn = document.getElementById("reveal-btn");
 const refreshCountDisplay = document.getElementById("refresh-count");
 
@@ -59,14 +59,14 @@ revealBtn.addEventListener("click", () => {
 
   // Add a slight delay for transition effect
   setTimeout(() => {
-    // Change color
-    problemDisplay.style.background = selected.color;
-    problemDisplay.style.boxShadow = `0 0 40px ${selected.color}80, inset 0 2px 10px rgba(0,0,0,0.2)`;
+    // Keep a consistent cool dark trivia card background
+    problemDisplay.style.background = "#334155";
+    problemDisplay.style.boxShadow = `inset 0 2px 10px rgba(0,0,0,0.2), 0 10px 30px rgba(0,0,0,0.3)`;
 
     // Update text
-    topicBadge.textContent = selected.topic;
-    problemTitle.textContent = selected.title;
     problemDesc.textContent = selected.desc;
+    problemInput.textContent = selected.input;
+    problemOutput.textContent = selected.output;
 
     // Show new problem
     conceptText.classList.remove("hidden");

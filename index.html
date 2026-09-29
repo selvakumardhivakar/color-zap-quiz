@@ -19,9 +19,15 @@
         <div class="card">
             <div id="problem-display" class="problem-display">
                 <div id="concept-text" class="concept-text hidden">
-                    <span class="topic-badge">?</span>
-                    <h2 class="problem-title">Click reveal to start</h2>
-                    <p class="problem-desc"></p>
+                    <p class="problem-desc" id="problem-desc">Click reveal for your next trivia question!</p>
+                    <div class="problem-io">
+                        <div class="io-block">
+                            <strong>Input:</strong> <span id="problem-input"></span>
+                        </div>
+                        <div class="io-block">
+                            <strong>Output:</strong> <span id="problem-output"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button id="reveal-btn" class="reveal-btn">Reveal Problem</button>
