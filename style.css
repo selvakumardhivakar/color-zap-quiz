@@ -119,6 +119,16 @@ p {
     color: #fff;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.problem-desc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    max-width: 450px;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
 .concept-text.hidden {
