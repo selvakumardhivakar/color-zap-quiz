@@ -72,10 +72,10 @@ p {
     gap: 30px;
 }
 
-.color-display {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.problem-display {
+    width: 100%;
+    min-height: 180px;
+    border-radius: 16px;
     background: #334155;
     display: flex;
     justify-content: center;
@@ -84,21 +84,41 @@ p {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    padding: 24px;
+    text-align: center;
 }
 
-.color-display.active {
-    transform: scale(1.05);
+.problem-display.active {
+    transform: scale(1.02);
 }
 
 .concept-text {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
     opacity: 1;
     transform: translateY(0);
     transition: all 0.5s ease-out;
-    text-transform: capitalize;
+}
+
+.topic-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.problem-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.4;
 }
 
 .concept-text.hidden {
