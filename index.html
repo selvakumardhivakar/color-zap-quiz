@@ -3,25 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSA Concept Color Quiz</title>
-    <meta name="description" content="A random color quiz that reveals DSA concepts.">
+    <title>DSA Concept Color Reveal</title>
+    <meta name="description" content="A random color quiz that reveals DSA concepts and code snippets.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="ambient-glow" id="ambient-glow"></div>
+
     <div class="container">
-        <div class="stats">
-            <span>Refreshes: <span id="refresh-count">0</span></span>
-        </div>
-        <h1>DSA Concept Reveal</h1>
-        <p>Click the button to reveal a random color and its associated DSA concept!</p>
-        
-        <div class="card">
-            <div id="color-display" class="color-display">
-                <span id="concept-text" class="concept-text hidden">?</span>
+        <!-- Header -->
+        <header class="header">
+            <div class="badge">
+                <span class="pulse-dot"></span>
+                <span>DSA Color Matrix</span>
             </div>
-            <button id="reveal-btn" class="reveal-btn">Reveal Concept</button>
+            <h1>DSA Concept Reveal</h1>
+            <p class="subtitle">Click the button to reveal a random color and its associated Data Structure & Algorithm concept!</p>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">Refreshes</span>
+                <span id="refresh-count" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total Revealed</span>
+                <span id="reveal-count" class="stat-value">0</span>
+            </div>
+            <button id="sound-toggle" class="icon-btn" title="Toggle Sound">
+                <span id="sound-icon">🔊</span>
+            </button>
         </div>
+
+        <!-- REVEAL CARD -->
+        <main class="card reveal-card">
+            <div class="display-wrapper">
+                <div id="color-display" class="color-display">
+                    <span id="concept-text" class="concept-text hidden">?</span>
+                </div>
+            </div>
+
+            <!-- Concept Detail Breakdown Card -->
+            <div id="concept-details" class="concept-details hidden">
+                <div class="concept-header">
+                    <span id="concept-category" class="concept-category">Data Structure</span>
+                    <span id="concept-complexity" class="concept-complexity">Time: O(1)</span>
+                </div>
+                <p id="concept-desc" class="concept-desc">Click reveal to discover key algorithmic constructs and their signature visual color profile.</p>
+                <div class="code-preview">
+                    <pre><code id="concept-code">// Selected concept snippet will appear here...</code></pre>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <button id="reveal-btn" class="reveal-btn">
+                    <span>Reveal Concept</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Designed for fast DSA memory retention & visually engaging practice.</p>
+        </footer>
     </div>
 
     <script src="main.js"></script>
