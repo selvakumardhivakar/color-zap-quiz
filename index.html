@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random DSA Problem Generator</title>
-    <meta name="description" content="A random generator for easy DSA problems.">
+    <meta name="description" content="A random generator for DSA problems.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="stats">
-            <span>Problems Solved / Refreshed: <span id="refresh-count">0</span></span>
+        <div class="top-bar">
+            <div class="stats">
+                <span>Problems Solved / Refreshed: <span id="refresh-count">0</span></span>
+            </div>
+            
+            <div class="toggle-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="easy-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-text">Easy Questions Only: <span id="toggle-status" class="status-off">OFF</span></span>
+            </div>
         </div>
+
         <h1>DSA Problem Generator</h1>
         <p>Click the button to reveal a random coding problem to solve!</p>
         
         <div class="card">
             <div id="problem-display" class="problem-display">
                 <div id="concept-text" class="concept-text">
-                    <p class="problem-desc" id="problem-desc">Click reveal for your next trivia question!</p>
+                    <div class="badge-row">
+                        <span id="difficulty-badge" class="badge badge-all">All Questions</span>
+                    </div>
+                    <p class="problem-desc" id="problem-desc">Click reveal for your next coding challenge!</p>
                     <div class="problem-io">
                         <div class="io-block">
                             <strong>Input:</strong> <span id="problem-input"></span>
